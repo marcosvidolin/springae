@@ -1,7 +1,7 @@
-##Springae
+#Springae
 
 
-# Project Template for use with App Engine Java (SpringMVC + Apache Tiles + Hibernate Validation + Objectify).
+## Project Template for use with App Engine Java (SpringMVC + Apache Tiles + Hibernate Validation + Objectify).
 
 Requires [Apache Maven](http://maven.apache.org) 3.0 or greater, and JDK 6+ in order to run.
 

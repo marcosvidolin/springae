@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd     http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+
+	<!-- Considera a estrutura de pacote para percorrer classes com as anotacoes 
+		de injecao de dependencia do Spring como: @Component, @Repository e @Service. -->
+	<context:component-scan base-package="br.com.marcosvidolin.springae" />
+
+	<!-- Habilita o uso de anotacoes para o Spring MVC. -->
+	<mvc:annotation-driven />
+
+	<!-- Permite utilizar a barra ("/") como conteudo mapeado pelo Spring MVC. -->
+	<mvc:default-servlet-handler />
+
+	<!-- Ativa o uso de anotacoes complementares ao contexto do Spring. -->
+	<context:annotation-config />
+
+	<bean id="tilesviewResolver"
+		class="org.springframework.web.servlet.view.tiles3.TilesViewResolver" />
+	<bean id="tilesConfigurer"
+		class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+		<property name="definitions">
+			<list>
+				<value>/WEB-INF/tiles/tiles.xml</value>
+				<value>/WEB-INF/view/**/views.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- Bean para ativar a leitura do properties de arcordo com o locale -->
+	<bean
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource"
+		id="messageSource" p:basenames="WEB-INF/i18n/messages"
+		p:fallbackToSystemLocale="false" />
+
+	<!-- Configura a aplicacao com locale pt-BR por default. -->
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+		<property name="defaultLocale" value="pt_BR" />
+	</bean>
+
+	<!-- Bean para mapear os erros para pagina de excecao do aplicativo -->
+	<bean
+		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver"
+		p:defaultErrorView="errorPage" />
+
+	<bean class="java.util.ArrayList" id="sobreApp">
+		<constructor-arg>
+			<list>
+				<value>sobre.title</value>
+				<value>sobre.built</value>
+				<value>sobre.site</value>
+				<value>sobre.build</value>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<mvc:view-controller path="/" view-name="index" />
+	
+</beans>

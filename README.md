@@ -1,4 +1,4 @@
-App Engine Java Springae
+Springae
 Copyright (C) 2013.
 
 ## Project Template for use with App Engine Java (SpringMVC + Apache Tiles + Hibernate Validation + Objectify).

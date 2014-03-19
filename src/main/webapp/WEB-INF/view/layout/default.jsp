@@ -16,9 +16,9 @@
     <meta name="description" content="">
     <meta name="author" content="Marcos Vidolin">
 
-	<link href="<c:url value="/resources/css/bootstrap.min.css"/>" rel="stylesheet" media="screen">
-    <link href="<c:url value="/resources/css/bootstrap-responsive.min.css"/>" rel="stylesheet" media="screen">
-    <link href="<c:url value="/resources/css/default.css"/>" rel="stylesheet" media="screen">
+	<link href="<c:url value="/resources/library/bootstrap/css/bootstrap.min.css"/>" rel="stylesheet" media="screen">
+	<link href="<c:url value="/resources/library/bootstrap/css/bootstrap-responsive.min.css"/>" rel="stylesheet" media="screen">
+	<link href="<c:url value="/resources/css/default.css"/>" rel="stylesheet" media="screen">
 
 	<tilesx:useAttribute id="styles" name="styles" classname="java.util.List" ignore="true" />
 	<c:forEach var="cssName" items="${styles}">
@@ -30,7 +30,6 @@
 	<!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <link href="<c:url value="/resources/js/modernizr.js"/>" rel="stylesheet" media="screen">
 </head>
 <body>
 
@@ -45,18 +44,10 @@
             <div class="span9" id="content">
 
                 <div class="row-fluid">
-                    <div class="alert alert-success">
-           				<button type="button" class="close" data-dismiss="alert">&times;</button>
-                        <h4>Success</h4>
-                      	The operation completed successfully
-                    </div>
-                </div>
-
-                <div class="row-fluid">
                     <div class="span9">                        
                         <div class="block">
                             <div class="navbar navbar-inner block-header">
-                                <div class="muted pull-left"><tiles:insertAttribute name="navegation" defaultValue="" /></div>
+                                <div class="muted pull-left"><tiles:insertAttribute name="navigation" defaultValue="" /></div>
                          	</div>
                             <div class="block-content collapse in">
                             
@@ -75,10 +66,9 @@
     </div>
     <!--/.fluid-container-->
 
-    <script src="<c:url value="/resources/js/jquery.min.js" />"></script>
-    <script src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
-    <script src="<c:url value="/resources/js/html5shiv.js" />"></script>
-
+    <script src="<c:url value="/resources/library/jquery-2.0.3.min.js" />"></script>
+    <script src="<c:url value="/resources/library/bootstrap/js/bootstrap.min.js" />"></script>
+    <script src="<c:url value="/resources/js/menu.js" />"></script>
 	<tilesx:useAttribute id="scripts" name="scripts" classname="java.util.List" ignore="true" />
 	<c:forEach var="jsName" items="${scripts}">
 		<script src="<c:url value="/resources/js/${jsName}" />"></script>

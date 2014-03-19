@@ -1,0 +1,36 @@
+<!DOCTYPE tiles-definitions PUBLIC  
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="/curso/create" extends="default">
+		<put-attribute name="title" value="Java Magazine Cursos" />
+		<put-attribute name="navigation" value="Curso > Cadastrar" />
+		<put-attribute name="body" value="/WEB-INF/view/curso/create.jsp" />
+	</definition>
+	
+	<definition name="/curso/list" extends="default">
+		<put-attribute name="title" value="Java Magazine Cursos" />
+		<put-attribute name="navigation" value="Curso > Listar" />
+		<put-attribute name="body" value="/WEB-INF/view/curso/list.jsp" />
+	</definition>
+	
+	<definition name="/curso/view" extends="default">
+		<put-attribute name="title" value="Java Magazine Cursos" />
+		<put-attribute name="navigation" value="Curso > Visualizar" />
+		<put-attribute name="body" value="/WEB-INF/view/curso/view.jsp" />
+	</definition>
+	
+	<definition name="/curso/update" extends="default">
+		<put-attribute name="title" value="Java Magazine Cursos" />
+		<put-attribute name="navigation" value="Curso > Atualizar" />
+		<put-attribute name="body" value="/WEB-INF/view/curso/update.jsp" />
+	</definition>
+	
+	<definition name="/curso/delete" extends="default">
+		<put-attribute name="title" value="Java Magazine Cursos" />
+		<put-attribute name="navigation" value="Curso > Excluir" />
+		<put-attribute name="body" value="/WEB-INF/view/curso/delete.jsp" />
+	</definition>
+
+</tiles-definitions>

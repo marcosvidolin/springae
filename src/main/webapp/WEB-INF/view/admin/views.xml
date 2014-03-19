@@ -1,0 +1,12 @@
+<!DOCTYPE tiles-definitions PUBLIC  
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="/adm/dashboard" extends="default">
+		<put-attribute name="title" value="Java Magazine Cursos" />
+		<put-attribute name="navigation" value="Administração > Dashboard" />
+		<put-attribute name="body" value="/WEB-INF/view/admin/dashboard.jsp" />
+	</definition>
+
+</tiles-definitions>

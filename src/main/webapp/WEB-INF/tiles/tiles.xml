@@ -5,8 +5,11 @@
 
 	<definition name="default" template="/WEB-INF/view/layout/default.jsp">
 		<put-attribute name="title" value="Default Layout" />
+		<put-attribute name="navbar" value="/WEB-INF/view/commons/navbar.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/view/commons/menu.jsp" />
 		<put-attribute name="body" value="" />
-		<put-attribute name="navegation" value="" />
+		<put-attribute name="navigation" value="" />
+		<put-attribute name="footer" value="/WEB-INF/view/commons/footer.jsp" />
 	</definition>
 
 </tiles-definitions>  

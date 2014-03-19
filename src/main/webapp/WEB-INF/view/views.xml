@@ -5,7 +5,7 @@
 
 	<definition name="index" extends="default">
 		<put-attribute name="title" value="Springae - Home" />
-		<put-attribute name="navegation" value="Dashboard" />
+		<put-attribute name="navigation" value="Dashboard" />
 		<put-attribute name="body" value="/WEB-INF/view/index.jsp" />
 	</definition>
 

@@ -41,7 +41,7 @@
 	<!-- Listener usado na inicializacao da aplicacao para configurar entidades 
 		do Objectify. -->
 	<listener>
-		<listener-class>br.com.marcosvidolin.springae.config.InitSetup</listener-class>
+		<listener-class>com.vidolima.springae.config.InitSetup</listener-class>
 	</listener>
 	
 
@@ -59,6 +59,10 @@
 	</servlet-mapping-->
 	
 	<mime-mapping>
+		<extension>html</extension>
+		<mime-type>text/html</mime-type>
+	</mime-mapping>
+	<mime-mapping>
 		<extension>css</extension>
 		<mime-type>text/css</mime-type>
 	</mime-mapping>
@@ -67,8 +71,8 @@
 		<mime-type>application/javascript</mime-type>
 	</mime-mapping>
 	<mime-mapping>
-		<extension>html</extension>
-		<mime-type>text/html</mime-type>
-	</mime-mapping>    
+		<extension>json</extension>
+		<mime-type>application/json</mime-type>
+	</mime-mapping>
     
 </web-app>

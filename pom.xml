@@ -208,6 +208,12 @@
 			<scope>system</scope>
 			<systemPath>${basedir}/temp/doco-v0.3.2.jar</systemPath>
 		</dependency>
+		
+	    <dependency>
+	      <groupId>com.google.apis</groupId>
+	      <artifactId>google-api-services-drive</artifactId>
+	      <version>v2-rev126-1.18.0-rc</version>
+	    </dependency>
 
 
 		<!-- Test Dependencies -->

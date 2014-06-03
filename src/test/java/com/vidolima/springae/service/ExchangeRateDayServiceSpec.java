@@ -9,7 +9,7 @@ import org.junit.Test;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 
-class ExchangeRateDayServiceSpec {
+public class ExchangeRateDayServiceSpec {
 
 	private final LocalServiceTestHelper HELPER = new LocalServiceTestHelper(
 			new LocalDatastoreServiceTestConfig());

@@ -5,42 +5,27 @@ import java.util.Date;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Unindex;
-import com.vidolima.doco.annotation.DocumentField;
-import com.vidolima.doco.annotation.DocumentId;
-import com.vidolima.doco.annotation.DocumentIndex;
-import com.vidolima.doco.annotation.FieldType;
 
 @Entity
-@DocumentIndex
 public class Curso implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@DocumentId
 	private Long codigo;
-	@DocumentField
 	private String nome;
-	@DocumentField
 	private String professor;
 	@Unindex
-	@DocumentField(type = FieldType.NUMBER)
 	private Integer minimoAlunosPorTurma;
 	@Unindex
-	@DocumentField(type = FieldType.NUMBER)
 	private Integer maximoAlunosPorTurma;
 	@Unindex
-	@DocumentField
 	private String descricao;
-	@DocumentField(type = FieldType.DATE)
 	private Date inicio;
-	@DocumentField(type = FieldType.DATE)
 	private Date conclusao;
 	private Boolean ativo;
 	private Boolean possuiVaga;
-	@DocumentField(type = FieldType.NUMBER)
 	private Float valor = 9900.12f;
-	@DocumentField(type = FieldType.NUMBER, name = "campoTestLong")
 	private Long test = 2147483647l;
 
 	public Long getCodigo() {

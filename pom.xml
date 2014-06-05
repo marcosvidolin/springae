@@ -18,7 +18,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java-version>1.7</java-version>
-		<appengine.target.version>1.8.8</appengine.target.version>
+		<appengine.target.version>1.9.5</appengine.target.version>
 		<org.springframework-version>3.2.3.RELEASE</org.springframework-version>
 		<org.springframework.security-version>3.1.4.RELEASE</org.springframework.security-version>
 		<org.aspectj-version>1.7.3</org.aspectj-version>
@@ -200,15 +200,6 @@
 			<version>14.0.1</version>
 		</dependency>
 
-
-		<dependency>
-			<groupId>com.vidolima</groupId>
-			<artifactId>doco</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-			<scope>system</scope>
-			<systemPath>${basedir}/temp/doco-v0.3.2.jar</systemPath>
-		</dependency>
-		
 	    <dependency>
 	      <groupId>com.google.apis</groupId>
 	      <artifactId>google-api-services-drive</artifactId>

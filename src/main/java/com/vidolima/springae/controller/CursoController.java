@@ -9,11 +9,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.google.appengine.api.search.Document;
-import com.google.appengine.api.search.Index;
-import com.vidolima.doco.Doco;
 import com.vidolima.springae.domain.Curso;
 import com.vidolima.springae.service.ICursoService;
 
@@ -42,29 +38,12 @@ public class CursoController {
 		return "/curso/create";
 	}
 
-	@RequestMapping(value = "/test/{nome}", method = RequestMethod.GET)
-	public @ResponseBody
-	Curso test(@PathVariable("nome") String nome) {
-
-		Doco doco = new Doco();
-		Index index = doco.getIndex(Curso.class);
-		Document doc = index.get(nome);
-
-		return doco.fromDocument(doc, Curso.class);
-	}
-
 	@RequestMapping(method = RequestMethod.POST)
 	public String create(@Valid Curso curso, BindingResult result) {
 		if (result.hasErrors())
 			return "/curso/create";
 
 		service.saveCurso(curso);
-
-		Doco doco = new Doco();
-		Document doc = doco.toDocument(curso);
-		Index index = doco.getIndex(Curso.class);
-		index.put(doc);
-
 		return "redirect:/curso";
 	}
 
